@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lizbeth Elena Josec Ruelas | CV</title>
+  <meta name="description" content="CV de Lizbeth Elena Josec Ruelas, técnica en Arquitectura de Plataformas y Servicios de Tecnologías de la Información (APSTI).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --oscuro: #12343b;
+      --oscuro-2: #0e2a30;
+      --acento: #1aa6a6;
+      --claro: #7fd6d6;
+      --texto: #3a4a50;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      background: #e9eef0;
+      color: var(--texto);
+      padding: 32px 16px;
+    }
+    .cv {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      background: #fff;
+      box-shadow: 0 8px 30px rgba(18, 52, 59, 0.18);
+    }
+
+    /* ---------- Columna lateral ---------- */
+    .lateral { width: 300px; flex: none; background: var(--oscuro); color: #fff; }
+    .foto-caja { background: var(--oscuro-2); padding: 40px 0 30px; display: flex; justify-content: center; }
+    .foto-caja img {
+      width: 170px; height: 170px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+      border: 5px solid var(--acento);
+    }
+    .lateral-cuerpo { padding: 30px 0 40px; }
+    .lateral h2 {
+      background: var(--acento); color: #fff;
+      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      padding: 8px 26px; margin-bottom: 14px;
+    }
+    .bloque { margin-bottom: 28px; }
+    .bloque-contenido { padding: 0 26px; font-size: 12px; line-height: 1.5; }
+    .dato {
