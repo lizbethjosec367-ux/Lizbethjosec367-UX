@@ -46,4 +46,267 @@
     }
     .bloque { margin-bottom: 28px; }
     .bloque-contenido { padding: 0 26px; font-size: 12px; line-height: 1.5; }
-    .dato {
+    .dato { margin-bottom: 12px; }
+    .dato b { display: block; color: var(--claro); font-weight: 700; }
+    .dato a { color: #fff; text-decoration: none; word-break: break-all; }
+    .dato a:hover { text-decoration: underline; }
+
+    /* Barras de nivel */
+    .nivel { margin-bottom: 12px; }
+    .nivel-texto { display: flex; justify-content: space-between; font-size: 11.5px; margin-bottom: 5px; }
+    .nivel-texto span:last-child { color: var(--claro); font-weight: 600; }
+    .barra { height: 6px; background: rgba(255, 255, 255, 0.15); border-radius: 3px; overflow: hidden; }
+    .barra i { display: block; height: 100%; background: var(--acento); border-radius: 3px; }
+
+    .intereses { display: flex; flex-wrap: wrap; gap: 8px; }
+    .intereses span {
+      font-size: 11px; font-weight: 600;
+      border: 1px solid var(--acento); color: var(--claro);
+      padding: 5px 11px; border-radius: 14px;
+    }
+
+    /* ---------- Columna principal ---------- */
+    .principal { flex: 1; min-width: 0; }
+    .encabezado { padding: 48px 40px 28px; border-bottom: 4px solid var(--acento); }
+    .encabezado h1 { font-size: 34px; line-height: 1.12; font-weight: 800; color: var(--oscuro); letter-spacing: 0.5px; }
+    .encabezado p {
+      margin-top: 12px; font-size: 12.5px; font-weight: 600; color: var(--acento);
+      letter-spacing: 1px; line-height: 1.5; text-transform: uppercase;
+    }
+    .contenido { padding: 28px 40px 40px; }
+    .seccion { margin-bottom: 28px; }
+    .seccion h2 {
+      font-size: 14px; font-weight: 700; letter-spacing: 2px; color: var(--oscuro);
+      border-left: 5px solid var(--acento); padding-left: 12px;
+      margin-bottom: 14px; text-transform: uppercase;
+    }
+    .seccion p { font-size: 12.5px; line-height: 1.7; }
+
+    /* Línea de tiempo */
+    .linea { position: relative; padding-left: 26px; }
+    .linea::before {
+      content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px;
+      width: 2px; background: #cfe3e5;
+    }
+    .item { position: relative; margin-bottom: 16px; }
+    .item::before {
+      content: ""; position: absolute; left: -26px; top: 4px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--acento); border: 2px solid #fff; box-shadow: 0 0 0 2px var(--acento);
+    }
+    .item .fecha { font-size: 11px; font-weight: 700; color: var(--acento); letter-spacing: 1px; text-transform: uppercase; }
+    .item h3 { font-size: 13px; font-weight: 700; color: var(--oscuro); line-height: 1.4; margin-top: 2px; }
+    .item .lugar { font-size: 12px; font-weight: 600; color: var(--texto); margin-top: 2px; }
+    .item p { margin-top: 4px; }
+
+    .lista-puntos { list-style: none; }
+    .lista-puntos li {
+      position: relative; padding-left: 20px; margin-bottom: 8px;
+      font-size: 12.5px; line-height: 1.55;
+    }
+    .lista-puntos li::before {
+      content: ""; position: absolute; left: 0; top: 7px;
+      width: 8px; height: 8px; border-radius: 50%; background: var(--acento);
+    }
+    .lista-puntos b { color: var(--oscuro); }
+
+    .rejilla { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .tarjeta {
+      border: 1px solid #d6e6e8; border-left: 4px solid var(--acento);
+      border-radius: 4px; padding: 10px 12px; background: #f7fbfb;
+    }
+    .tarjeta b { display: block; font-size: 12.5px; color: var(--oscuro); line-height: 1.35; }
+    .tarjeta span { font-size: 11.5px; color: var(--texto); }
+
+    .acciones { max-width: 900px; margin: 0 auto 16px; text-align: right; }
+    .acciones button {
+      font-family: inherit; font-size: 13px; font-weight: 600; color: #fff;
+      background: var(--acento); border: 0; border-radius: 6px; padding: 10px 18px; cursor: pointer;
+    }
+    .acciones button:hover { background: #148a8a; }
+
+    /* ---------- Celular ---------- */
+    @media (max-width: 720px) {
+      body { padding: 0; }
+      .acciones { padding: 12px; }
+      .cv { flex-direction: column; box-shadow: none; }
+      .lateral { width: 100%; }
+      .encabezado { padding: 32px 22px 22px; }
+      .encabezado h1 { font-size: 26px; }
+      .contenido { padding: 24px 22px 32px; }
+      .rejilla { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- Imprimir / PDF ---------- */
+    @media print {
+      @page { size: A4; margin: 0; }
+      body { background: #fff; padding: 0; }
+      .acciones { display: none; }
+      .cv { box-shadow: none; max-width: none; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="acciones">
+    <button onclick="window.print()">Descargar en PDF</button>
+  </div>
+
+  <main class="cv">
+
+    <aside class="lateral">
+      <div class="foto-caja">
+        <img src="foto.jpg" alt="Foto de Lizbeth Elena Josec Ruelas">
+      </div>
+
+      <div class="lateral-cuerpo">
+
+        <section class="bloque">
+          <h2>CONTACTO</h2>
+          <div class="bloque-contenido">
+            <div class="dato"><b>Celular</b><a href="tel:+51991639790">991 639 790</a></div>
+            <div class="dato"><b>Correo</b><a href="mailto:lizbethjosec367@gmail.com">lizbethjosec367@gmail.com</a></div>
+            <div class="dato"><b>Ubicación</b>Santa Lucía, Lampa, Puno — Perú</div>
+            <div class="dato"><b>GitHub</b><a href="https://github.com/Lizbethjosec367-UX">github.com/Lizbethjosec367-UX</a></div>
+          </div>
+        </section>
+
+        <section class="bloque">
+          <h2>DATOS PERSONALES</h2>
+          <div class="bloque-contenido">
+            <div class="dato"><b>Nombres y apellidos</b>Lizbeth Elena Josec Ruelas</div>
+            <div class="dato"><b>Edad</b>20 años</div>
+          </div>
+        </section>
+
+        <section class="bloque">
+          <h2>APTITUDES</h2>
+          <div class="bloque-contenido">
+            <div class="nivel"><div class="nivel-texto"><span>Trabajo en equipo</span><span>90%</span></div><div class="barra"><i style="width:90%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>Responsabilidad</span><span>95%</span></div><div class="barra"><i style="width:95%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>Comunicación</span><span>85%</span></div><div class="barra"><i style="width:85%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>Resolución de problemas</span><span>80%</span></div><div class="barra"><i style="width:80%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>Adaptabilidad</span><span>85%</span></div><div class="barra"><i style="width:85%"></i></div></div>
+          </div>
+        </section>
+
+        <section class="bloque">
+          <h2>HERRAMIENTAS</h2>
+          <div class="bloque-contenido">
+            <div class="nivel"><div class="nivel-texto"><span>Word</span><span>85%</span></div><div class="barra"><i style="width:85%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>Excel</span><span>80%</span></div><div class="barra"><i style="width:80%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>PowerPoint</span><span>80%</span></div><div class="barra"><i style="width:80%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>HTML y CSS</span><span>75%</span></div><div class="barra"><i style="width:75%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>Git y GitHub</span><span>70%</span></div><div class="barra"><i style="width:70%"></i></div></div>
+            <div class="nivel"><div class="nivel-texto"><span>Bases de datos</span><span>70%</span></div><div class="barra"><i style="width:70%"></i></div></div>
+          </div>
+        </section>
+
+        <section class="bloque">
+          <h2>IDIOMAS</h2>
+          <div class="bloque-contenido">
+            <div class="nivel"><div class="nivel-texto"><span>Español</span><span>Nativo</span></div><div class="barra"><i style="width:100%"></i></div></div>
+          </div>
+        </section>
+
+        <section class="bloque">
+          <h2>INTERESES</h2>
+          <div class="bloque-contenido">
+            <div class="intereses">
+              <span>Tecnología</span>
+              <span>Redes</span>
+              <span>Programación</span>
+              <span>Ciberseguridad</span>
+              <span>Aprender cosas nuevas</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+    <div class="principal">
+      <header class="encabezado">
+        <h1>Lizbeth Elena<br>Josec Ruelas</h1>
+        <p>Técnica en Arquitectura de Plataformas y Servicios de Tecnologías de la Información</p>
+      </header>
+
+      <div class="contenido">
+
+        <section class="seccion">
+          <h2>Perfil profesional</h2>
+          <p>Profesional técnica en Tecnologías de la Información, con interés en el desarrollo de sistemas, la gestión de plataformas y el soporte tecnológico. Responsable, ordenada y con gran capacidad de aprendizaje. Busco integrarme a un equipo donde pueda aplicar mis conocimientos y seguir creciendo profesionalmente.</p>
+        </section>
+
+        <section class="seccion">
+          <h2>Objetivo profesional</h2>
+          <p>Contribuir con mis conocimientos en tecnologías de la información al logro de los objetivos de la organización, aplicando buenas prácticas en el desarrollo de sistemas, las redes y el soporte técnico, y fortaleciendo mis competencias de forma continua.</p>
+        </section>
+
+        <section class="seccion">
+          <h2>Formación académica</h2>
+          <div class="linea">
+            <div class="item">
+              <div class="fecha">Actualidad</div>
+              <h3>Carrera técnica en Arquitectura de Plataformas y Servicios de Tecnologías de la Información (APSTI)</h3>
+              <div class="lugar">IESTP Santa Lucía — Instituto de Educación Superior Tecnológico Público</div>
+            </div>
+            <div class="item">
+              <div class="fecha">Educación secundaria</div>
+              <h3>Educación básica regular</h3>
+              <div class="lugar">Colegio José Carlos Mariátegui — Santa Lucía, Lampa, Puno</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="seccion">
+          <h2>Competencias técnicas</h2>
+          <ul class="lista-puntos">
+            <li><b>Desarrollo de sistemas:</b> creación de aplicaciones y páginas web con HTML y CSS.</li>
+            <li><b>Bases de datos:</b> organización y gestión de la información de un sistema.</li>
+            <li><b>Redes y fibra óptica:</b> conocimientos de redes y telecomunicaciones.</li>
+            <li><b>Seguridad en la web:</b> buenas prácticas para proteger la información.</li>
+            <li><b>Transformación digital:</b> Industria 4.0 y uso de tecnología en las organizaciones.</li>
+            <li><b>Soporte técnico:</b> instalación y configuración de software y equipos.</li>
+          </ul>
+        </section>
+
+        <section class="seccion">
+          <h2>Proyectos</h2>
+          <div class="linea">
+            <div class="item">
+              <div class="fecha">IESTP Santa Lucía</div>
+              <h3>Sistema de biblioteca</h3>
+              <p>Sistema para la gestión de la biblioteca del instituto, con los siguientes módulos:</p>
+              <ul class="lista-puntos" style="margin-top:6px">
+                <li>Registro de libros organizados por módulo.</li>
+                <li>Control de préstamos y devoluciones.</li>
+                <li>Administración de estudiantes.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="seccion">
+          <h2>Cursos y capacitaciones</h2>
+          <div class="rejilla">
+            <div class="tarjeta"><b>Fibra óptica</b><span>Redes y telecomunicaciones</span></div>
+            <div class="tarjeta"><b>Seguridad en la web</b><span>Ciberseguridad</span></div>
+            <div class="tarjeta"><b>Industria 4.0 y transformación digital</b><span>Innovación tecnológica</span></div>
+            <div class="tarjeta"><b>Tendencias en las comunicaciones en el Perú</b><span>Telecomunicaciones</span></div>
+          </div>
+        </section>
+
+        <section class="seccion">
+          <h2>Referencias</h2>
+          <p>Disponibles a solicitud.</p>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
