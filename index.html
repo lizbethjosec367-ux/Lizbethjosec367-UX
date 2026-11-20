@@ -1,550 +1,753 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lizbeth Elena Josec Ruelas | CV</title>
 
-<title>CV | Lizbeth Elena Josec Ruelas</title>
+  <meta name="description" content="CV de Lizbeth Elena Josec Ruelas, estudiante de Arquitectura de Plataformas y Servicios de Tecnologías de la Información.">
 
-<meta name="description" content="Currículum de Lizbeth Elena Josec Ruelas, estudiante de Arquitectura de Plataformas y Servicios de Tecnologías de la Información.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --rosa: #bd8298;
-    --rosa-palo: #d5a6b5;
-    --rosa-claro: #f8edf1;
-    --rosa-fondo: #fff9fb;
-    --texto: #493b42;
-    --blanco: #ffffff;
+  --oscuro: #12343b;
+  --oscuro-2: #0e2a30;
+  --acento: #1aa6a6;
+  --claro: #7fd6d6;
+  --texto: #3a4a50;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--rosa-fondo);
-    color: var(--texto);
-    line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
+  background: #e9eef0;
+  color: var(--texto);
+  padding: 32px 16px;
 }
 
-/* ENCABEZADO */
-header {
-    background: var(--blanco);
-    padding: 18px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 15px #00000012;
+/* CONTENEDOR PRINCIPAL */
+
+.cv {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(18,52,59,.18);
 }
 
-.logo {
-    color: var(--rosa);
-    font-size: 21px;
-    font-weight: bold;
+/* COLUMNA LATERAL */
+
+.lateral {
+  width: 300px;
+  flex-shrink: 0;
+  background: var(--oscuro);
+  color: #fff;
 }
 
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.foto-caja {
+  background: var(--oscuro-2);
+  padding: 40px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--texto);
-    font-size: 14px;
-    font-weight: bold;
-    transition: .3s;
+.foto-caja img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid var(--acento);
 }
 
-nav a:hover {
-    color: var(--rosa);
+.lateral-cuerpo {
+  padding: 30px 0 40px;
+}
+
+.lateral h2 {
+  background: var(--acento);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 9px 26px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.bloque {
+  margin-bottom: 28px;
+}
+
+.bloque-contenido {
+  padding: 0 26px;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.dato {
+  margin-bottom: 13px;
+  overflow-wrap: anywhere;
+}
+
+.dato b {
+  display: block;
+  color: var(--claro);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.dato a {
+  color: #fff;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.dato a:hover {
+  text-decoration: underline;
+}
+
+/* BARRAS DE NIVEL */
+
+.nivel {
+  margin-bottom: 14px;
+}
+
+.nivel-texto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.nivel-texto span:last-child {
+  color: var(--claro);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.barra {
+  height: 6px;
+  background: rgba(255,255,255,.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barra i {
+  display: block;
+  height: 100%;
+  background: var(--acento);
+  border-radius: 3px;
+}
+
+/* INTERESES */
+
+.intereses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.intereses span {
+  font-size: 10.5px;
+  font-weight: 600;
+  border: 1px solid var(--acento);
+  color: var(--claro);
+  padding: 6px 10px;
+  border-radius: 14px;
+}
+
+/* COLUMNA PRINCIPAL */
+
+.principal {
+  flex: 1;
+  min-width: 0;
+}
+
+.encabezado {
+  padding: 48px 40px 28px;
+  border-bottom: 4px solid var(--acento);
+  text-align: left;
+}
+
+.encabezado h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--oscuro);
+  letter-spacing: .5px;
+  text-align: left;
+}
+
+.encabezado p {
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--acento);
+  letter-spacing: 1px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.contenido {
+  padding: 30px 40px 40px;
 }
 
 /* SECCIONES */
-section {
-    padding: 75px 10%;
-    scroll-margin-top: 90px;
+
+.seccion {
+  margin-bottom: 30px;
 }
 
-section:nth-child(even) {
-    background: var(--rosa-claro);
+.seccion h2 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--oscuro);
+  border-left: 5px solid var(--acento);
+  padding-left: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: left;
 }
 
-.contenedor {
-    max-width: 1100px;
-    margin: auto;
+.seccion p {
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: break-word;
 }
 
-.titulo {
-    text-align: center;
-    color: var(--rosa);
-    font-size: 30px;
-    margin-bottom: 35px;
-}
+/* LINEA DE TIEMPO */
 
 .linea {
-    width: 70px;
-    height: 4px;
-    background: var(--rosa-palo);
-    margin: 10px auto 25px;
-    border-radius: 10px;
+  position: relative;
+  padding-left: 26px;
 }
 
-/* INICIO */
-.inicio {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, #f8edf1, #e7c6d1);
+.linea::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #cfe3e5;
 }
 
-.inicio h1 {
-    font-size: 42px;
-    color: #9e6078;
-    margin-bottom: 10px;
+.item {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.inicio h2 {
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 20px;
+.item:last-child {
+  margin-bottom: 0;
 }
 
-.inicio p {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
+.item::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--acento);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--acento);
 }
 
-.boton {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 28px;
-    background: var(--rosa);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: .3s;
+.item .fecha {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--acento);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
-.boton:hover {
-    background: #985c73;
-    transform: translateY(-3px);
+.item h3 {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--oscuro);
+  line-height: 1.6;
+  margin-top: 2px;
+  text-align: left;
 }
 
-/* SOBRE MI */
-.sobre-mi {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+.item .lugar {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--texto);
+  margin-top: 4px;
+  line-height: 1.6;
+  text-align: left;
 }
 
-.foto {
-    width: 230px;
-    height: 270px;
-    object-fit: cover;
-    border-radius: 18px;
-    border: 6px solid white;
-    box-shadow: 0 5px 20px #00000015;
-}
-
-.descripcion {
-    flex: 1;
-    min-width: 260px;
-    text-align: justify;
-}
-
-/* TARJETAS */
-.tarjetas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
-}
-
-.tarjeta {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px #0000000c;
-    border-bottom: 4px solid var(--rosa-palo);
-    transition: .3s;
-}
-
-.tarjeta:hover {
-    transform: translateY(-5px);
-}
-
-.tarjeta h3 {
-    color: var(--rosa);
-    margin-bottom: 12px;
-}
-
-.tarjeta p {
-    text-align: justify;
+.item p {
+  margin-top: 6px;
 }
 
 /* LISTAS */
-.lista {
-    max-width: 850px;
-    margin: auto;
+
+.lista-puntos {
+  list-style: none;
+  margin-top: 8px;
 }
 
-.lista li {
-    margin: 12px 0;
-    padding: 12px 18px;
-    background: white;
-    border-left: 4px solid var(--rosa-palo);
-    border-radius: 8px;
-    list-style-position: inside;
+.lista-puntos li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: justify;
 }
 
-/* DATOS */
-.datos {
-    max-width: 750px;
-    margin: auto;
+.lista-puntos li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--acento);
 }
 
-.datos p {
-    padding: 13px;
-    border-bottom: 1px solid #e6c7d2;
+.lista-puntos b {
+  color: var(--oscuro);
 }
 
-.datos strong {
-    color: #a96c83;
+/* TARJETAS */
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
-/* REFERENCIAS */
-.referencia {
-    text-align: center;
+.tarjeta {
+  border: 1px solid #d6e6e8;
+  border-left: 4px solid var(--acento);
+  border-radius: 4px;
+  padding: 12px;
+  background: #f7fbfb;
+  text-align: left;
 }
 
-/* CONTACTO */
-.contacto {
-    text-align: center;
+.tarjeta b {
+  display: block;
+  font-size: 12px;
+  color: var(--oscuro);
+  line-height: 1.5;
+  margin-bottom: 4px;
 }
 
-.contacto p {
-    margin: 12px;
+.tarjeta span {
+  font-size: 11px;
+  color: var(--texto);
+  line-height: 1.5;
 }
 
-.contacto a {
-    color: #a96c83;
-    text-decoration: none;
-    font-weight: bold;
+/* BOTON PDF */
+
+.acciones {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  text-align: right;
 }
 
-/* PIE DE PAGINA */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #bd8298;
-    color: white;
+.acciones button {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--acento);
+  border: 0;
+  border-radius: 6px;
+  padding: 11px 20px;
+  cursor: pointer;
 }
 
-/* WHATSAPP FLOTANTE */
-.whatsapp {
-    position: fixed;
-    bottom: 22px;
-    right: 22px;
-    background: #25D366;
-    color: white;
-    padding: 14px 20px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 15px #00000030;
-    z-index: 200;
+.acciones button:hover {
+  background: #148a8a;
 }
 
-/* CELULARES */
-@media (max-width: 700px) {
-    header {
-        justify-content: center;
-        text-align: center;
-    }
+/* RESPONSIVE */
 
-    nav {
-        justify-content: center;
-        gap: 10px;
-    }
+@media (max-width: 720px) {
 
-    nav a {
-        font-size: 12px;
-    }
+  body {
+    padding: 0;
+  }
 
-    section {
-        padding: 55px 6%;
-    }
+  .acciones {
+    padding: 12px;
+    margin-bottom: 0;
+  }
 
-    .inicio h1 {
-        font-size: 30px;
-    }
+  .cv {
+    flex-direction: column;
+    box-shadow: none;
+  }
 
-    .titulo {
-        font-size: 25px;
-    }
+  .lateral {
+    width: 100%;
+  }
 
-    .foto {
-        width: 200px;
-        height: 230px;
-    }
+  .foto-caja {
+    padding: 30px 0;
+  }
+
+  .encabezado {
+    padding: 32px 22px 22px;
+  }
+
+  .encabezado h1 {
+    font-size: 27px;
+  }
+
+  .contenido {
+    padding: 25px 22px 32px;
+  }
+
+  .rejilla {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion p,
+  .lista-puntos li {
+    text-align: justify;
+  }
+}
+
+/* IMPRESION A4 */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+
+  body {
+    background: #fff;
+    padding: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .acciones {
+    display: none;
+  }
+
+  .cv {
+    max-width: none;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .seccion,
+  .item,
+  .tarjeta {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">LIZBETH JOSEC</div>
+<div class="acciones">
+  <button onclick="window.print()">Descargar en PDF</button>
+</div>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#datos">Mis datos</a>
-        <a href="#formacion">Formación</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#referencias">Referencias</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
+<main class="cv">
 
-<!-- INICIO -->
-<section class="inicio" id="inicio">
-    <div class="contenedor">
-        <h1>Lizbeth Elena Josec Ruelas</h1>
-        <h2>Estudiante de Arquitectura de Plataformas y Servicios de Tecnologías de la Información</h2>
+<!-- COLUMNA LATERAL -->
 
-        <p>
-            Bienvenidos a mi currículum vitae digital.
-            Aquí encontrarás información sobre mi formación académica,
-            habilidades, proyectos y datos de contacto.
-        </p>
+<aside class="lateral">
 
-        <a href="#sobre-mi" class="boton">Conóceme</a>
-    </div>
-</section>
+  <div class="foto-caja">
+    <img src="foto.jpg" alt="Foto de Lizbeth Elena Josec Ruelas">
+  </div>
 
-<!-- SOBRE MI -->
-<section id="sobre-mi">
-    <div class="contenedor">
-        <h2 class="titulo">Sobre mí</h2>
-        <div class="linea"></div>
+  <div class="lateral-cuerpo">
 
-        <div class="sobre-mi">
-            <img src="foto.jpg" alt="Fotografía de Lizbeth Elena Josec Ruelas" class="foto">
+    <section class="bloque">
+      <h2>CONTACTO</h2>
+      <div class="bloque-contenido">
 
-            <div class="descripcion">
-                <h3>¡Hola! Soy Lizbeth</h3>
-                <p>
-                    Soy estudiante de la carrera de Arquitectura de
-                    Plataformas y Servicios de Tecnologías de la
-                    Información en el IESTP Santa Lucía.
-                </p>
-                <p>
-                    Me interesa el desarrollo web, la tecnología,
-                    las bases de datos y la creación de soluciones
-                    digitales. Me considero una persona responsable,
-                    organizada, creativa y con disposición para aprender.
-                </p>
-            </div>
+        <div class="dato">
+          <b>Celular</b>
+          <a href="tel:+51991639790">991 639 790</a>
         </div>
-    </div>
-</section>
 
-<!-- DATOS PERSONALES -->
-<section id="datos">
-    <div class="contenedor">
-        <h2 class="titulo">Mis datos personales</h2>
-        <div class="linea"></div>
-
-        <div class="datos">
-            <p><strong>Nombres y apellidos:</strong> Lizbeth Elena Josec Ruelas</p>
-            <p><strong>Correo:</strong> lizbethjosec367@gmail.com</p>
-            <p><strong>Teléfono:</strong> 991 639 790</p>
-            <p><strong>Ubicación:</strong> Santa Lucía, Lampa, Puno - Perú</p>
-            <p><strong>GitHub:</strong>
-                <a href="https://github.com/Lizbethjosec367-UX" target="_blank">Mi perfil de GitHub</a>
-            </p>
+        <div class="dato">
+          <b>Correo</b>
+          <a href="mailto:lizbethjosec367@gmail.com">lizbethjosec367@gmail.com</a>
         </div>
-    </div>
-</section>
 
-<!-- FORMACION -->
-<section id="formacion">
-    <div class="contenedor">
-        <h2 class="titulo">Formación académica</h2>
-        <div class="linea"></div>
-
-        <div class="tarjetas">
-            <article class="tarjeta">
-                <h3>Educación superior</h3>
-                <p><strong>Institución:</strong> IESTP Santa Lucía</p>
-                <p><strong>Carrera:</strong> Arquitectura de Plataformas y Servicios de Tecnologías de la Información.</p>
-                <p><strong>Semestre:</strong> VI</p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>Educación secundaria</h3>
-                <p><strong>Institución:</strong> Colegio José Carlos Mariátegui.</p>
-                <p><strong>Ubicación:</strong> Santa Lucía, Lampa, Puno.</p>
-            </article>
+        <div class="dato">
+          <b>Ubicación</b>
+          Santa Lucía, Lampa, Puno — Perú
         </div>
-    </div>
-</section>
 
-<!-- HABILIDADES -->
-<section id="habilidades">
-    <div class="contenedor">
-        <h2 class="titulo">Mis habilidades</h2>
-        <div class="linea"></div>
-
-        <div class="tarjetas">
-            <article class="tarjeta">
-                <h3>Habilidades técnicas</h3>
-                <ul>
-                    <li>Microsoft Word</li>
-                    <li>Microsoft Excel</li>
-                    <li>Microsoft PowerPoint</li>
-                    <li>HTML y CSS</li>
-                    <li>Git y GitHub</li>
-                    <li>Bases de datos</li>
-                </ul>
-            </article>
-
-            <article class="tarjeta">
-                <h3>Habilidades personales</h3>
-                <ul>
-                    <li>Trabajo en equipo</li>
-                    <li>Responsabilidad</li>
-                    <li>Comunicación</li>
-                    <li>Creatividad</li>
-                    <li>Adaptabilidad</li>
-                    <li>Resolución de problemas</li>
-                </ul>
-            </article>
+        <div class="dato">
+          <b>GitHub</b>
+          <a href="https://github.com/Lizbethjosec367-UX">github.com/Lizbethjosec367-UX</a>
         </div>
-    </div>
-</section>
 
-<!-- PROYECTOS -->
-<section id="proyectos">
-    <div class="contenedor">
-        <h2 class="titulo">Mis proyectos</h2>
-        <div class="linea"></div>
+      </div>
+    </section>
 
-        <div class="tarjetas">
-            <article class="tarjeta">
-                <h3>Sistema de biblioteca</h3>
-                <p>
-                    Proyecto desarrollado para registrar libros,
-                    organizar información, gestionar préstamos y
-                    devoluciones y llevar un control de estudiantes.
-                </p>
-            </article>
+    <section class="bloque">
+      <h2>DATOS PERSONALES</h2>
+      <div class="bloque-contenido">
 
-            <article class="tarjeta">
-                <h3>Cafetería ALIZ</h3>
-                <p>
-                    Proyecto de un kiosco digital donde los clientes
-                    pueden consultar productos, reservar sus pedidos
-                    y recogerlos en el horario seleccionado.
-                </p>
-            </article>
+        <div class="dato">
+          <b>Nombres y apellidos</b>
+          Lizbeth Elena Josec Ruelas
         </div>
-    </div>
-</section>
 
-<!-- CURSOS -->
-<section id="cursos">
-    <div class="contenedor">
-        <h2 class="titulo">Cursos y capacitaciones</h2>
-        <div class="linea"></div>
+        <div class="dato">
+          <b>Edad</b>
+          20 años
+        </div>
 
-        <ul class="lista">
-            <li>Fibra óptica.</li>
-            <li>Seguridad en la web.</li>
-            <li>Industria 4.0 y transformación digital.</li>
-            <li>Tendencias en las comunicaciones en el Perú.</li>
-        </ul>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- REFERENCIAS -->
-<section id="referencias">
-    <div class="contenedor referencia">
-        <h2 class="titulo">Referencias</h2>
-        <div class="linea"></div>
+    <section class="bloque">
+      <h2>APTITUDES</h2>
+      <div class="bloque-contenido">
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Trabajo en equipo</span><span>90%</span></div>
+          <div class="barra"><i style="width:90%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Responsabilidad</span><span>95%</span></div>
+          <div class="barra"><i style="width:95%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Comunicación</span><span>85%</span></div>
+          <div class="barra"><i style="width:85%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Resolución de problemas</span><span>80%</span></div>
+          <div class="barra"><i style="width:80%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Adaptabilidad</span><span>85%</span></div>
+          <div class="barra"><i style="width:85%"></i></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bloque">
+      <h2>HERRAMIENTAS</h2>
+      <div class="bloque-contenido">
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Word</span><span>85%</span></div>
+          <div class="barra"><i style="width:85%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Excel</span><span>80%</span></div>
+          <div class="barra"><i style="width:80%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>PowerPoint</span><span>80%</span></div>
+          <div class="barra"><i style="width:80%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>HTML y CSS</span><span>75%</span></div>
+          <div class="barra"><i style="width:75%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Git y GitHub</span><span>70%</span></div>
+          <div class="barra"><i style="width:70%"></i></div>
+        </div>
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Bases de datos</span><span>70%</span></div>
+          <div class="barra"><i style="width:70%"></i></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bloque">
+      <h2>IDIOMAS</h2>
+      <div class="bloque-contenido">
+
+        <div class="nivel">
+          <div class="nivel-texto"><span>Español</span><span>Nativo</span></div>
+          <div class="barra"><i style="width:100%"></i></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bloque">
+      <h2>INTERESES</h2>
+      <div class="bloque-contenido">
+        <div class="intereses">
+          <span>Tecnología</span>
+          <span>Redes</span>
+          <span>Programación</span>
+          <span>Ciberseguridad</span>
+          <span>Aprender cosas nuevas</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</aside>
+
+<!-- COLUMNA PRINCIPAL -->
+
+<div class="principal">
+
+  <header class="encabezado">
+    <h1>Lizbeth Elena<br>Josec Ruelas</h1>
+    <p>Técnica en Arquitectura de Plataformas y Servicios de Tecnologías de la Información</p>
+  </header>
+
+  <div class="contenido">
+
+    <section class="seccion">
+      <h2>Perfil profesional</h2>
+      <p>
+        Estudiante de Arquitectura de Plataformas y Servicios de Tecnologías de la Información, con interés en el desarrollo de sistemas, la gestión de plataformas y el soporte tecnológico. Me caracterizo por ser responsable, organizada y tener capacidad de aprendizaje. Busco oportunidades para aplicar mis conocimientos y continuar desarrollándome profesionalmente.
+      </p>
+    </section>
+
+    <section class="seccion">
+      <h2>Objetivo profesional</h2>
+      <p>
+        Contribuir con mis conocimientos en tecnologías de la información al logro de los objetivos de una organización, aplicando buenas prácticas en el desarrollo de sistemas, las redes y el soporte técnico, fortaleciendo mis competencias de forma continua.
+      </p>
+    </section>
+
+    <section class="seccion">
+      <h2>Formación académica</h2>
+
+      <div class="linea">
+
+        <div class="item">
+          <div class="fecha">Actualidad</div>
+          <h3>Carrera técnica en Arquitectura de Plataformas y Servicios de Tecnologías de la Información (APSTI)</h3>
+          <div class="lugar">IESTP Santa Lucía — Instituto de Educación Superior Tecnológico Público</div>
+        </div>
+
+        <div class="item">
+          <div class="fecha">Educación secundaria</div>
+          <h3>Educación básica regular</h3>
+          <div class="lugar">Colegio José Carlos Mariátegui — Santa Lucía, Lampa, Puno</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="seccion">
+      <h2>Competencias técnicas</h2>
+
+      <ul class="lista-puntos">
+        <li><b>Desarrollo de sistemas:</b> creación de aplicaciones y páginas web utilizando HTML y CSS.</li>
+        <li><b>Bases de datos:</b> organización y gestión de información de un sistema.</li>
+        <li><b>Redes y fibra óptica:</b> conocimientos básicos de redes y telecomunicaciones.</li>
+        <li><b>Seguridad en la web:</b> aplicación de buenas prácticas para proteger la información.</li>
+        <li><b>Transformación digital:</b> conocimientos sobre Industria 4.0 y uso de tecnología en las organizaciones.</li>
+        <li><b>Soporte técnico:</b> instalación y configuración de software y equipos informáticos.</li>
+      </ul>
+    </section>
+
+    <section class="seccion">
+      <h2>Proyectos</h2>
+
+      <div class="linea">
+        <div class="item">
+          <div class="fecha">IESTP Santa Lucía</div>
+          <h3>Sistema de biblioteca</h3>
+
+          <p>
+            Desarrollo de un sistema orientado a la gestión y administración de una biblioteca institucional, incluyendo:
+          </p>
+
+          <ul class="lista-puntos">
+            <li>Registro y organización de libros por categorías.</li>
+            <li>Control de préstamos y devoluciones.</li>
+            <li>Registro y administración de estudiantes.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <h2>Cursos y capacitaciones</h2>
+
+      <div class="rejilla">
 
         <div class="tarjeta">
-            <h3>Referencias académicas y personales</h3>
-            <p>
-                Disponibles a solicitud del interesado.
-            </p>
-            <p>
-                Los datos de las personas de referencia se
-                proporcionarán previa autorización.
-            </p>
+          <b>Fibra óptica</b>
+          <span>Redes y telecomunicaciones</span>
         </div>
-    </div>
-</section>
 
-<!-- CONTACTO -->
-<section id="contacto">
-    <div class="contenedor contacto">
-        <h2 class="titulo">Contáctame</h2>
-        <div class="linea"></div>
+        <div class="tarjeta">
+          <b>Seguridad en la web</b>
+          <span>Ciberseguridad</span>
+        </div>
 
-        <p><strong>Correo:</strong>
-            <a href="mailto:lizbethjosec367@gmail.com">
-                lizbethjosec367@gmail.com
-            </a>
-        </p>
+        <div class="tarjeta">
+          <b>Industria 4.0 y transformación digital</b>
+          <span>Innovación tecnológica</span>
+        </div>
 
-        <p><strong>Teléfono:</strong> 991 639 790</p>
+        <div class="tarjeta">
+          <b>Tendencias en las comunicaciones en el Perú</b>
+          <span>Telecomunicaciones</span>
+        </div>
 
-        <p><strong>GitHub:</strong>
-            <a href="https://github.com/Lizbethjosec367-UX" target="_blank">
-                Ver mi GitHub
-            </a>
-        </p>
+      </div>
+    </section>
 
-        <a class="boton"
-           href="https://wa.me/51991639790?text=Hola%20Lizbeth,%20vi%20tu%20CV%20y%20deseo%20contactarte."
-           target="_blank">
-            Escribirme por WhatsApp
-        </a>
-    </div>
-</section>
+    <section class="seccion">
+      <h2>Referencias</h2>
+      <p>Disponibles a solicitud.</p>
+    </section>
 
-<footer>
-    <p>© 2026 Lizbeth Elena Josec Ruelas | Currículum Vitae</p>
-    <p>Diseñado con dedicación en rosa palo</p>
-</footer>
+  </div>
+</div>
 
-<a class="whatsapp"
-   href="https://wa.me/51991639790?text=Hola%20Lizbeth,%20vi%20tu%20CV."
-   target="_blank"
-   aria-label="Contactar por WhatsApp">
-    WhatsApp
-</a>
+</main>
 
 </body>
 </html>
