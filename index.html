@@ -1,753 +1,1283 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lizbeth Elena Josec Ruelas | CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio profesional de Lizbeth Elena Josec Ruelas">
+<title>Lizbeth Elena Josec Ruelas | Portafolio</title>
 
-  <meta name="description" content="CV de Lizbeth Elena Josec Ruelas, estudiante de Arquitectura de Plataformas y Servicios de Tecnologías de la Información.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --oscuro: #12343b;
-  --oscuro-2: #0e2a30;
-  --acento: #1aa6a6;
-  --claro: #7fd6d6;
-  --texto: #3a4a50;
+    --wine: #795064;
+    --rose: #b98298;
+    --pink: #ead5de;
+    --cream: #faf7f4;
+    --white: #ffffff;
+    --ink: #332a30;
+    --muted: #81747a;
+    --gold: #b99a6a;
+    --line: #eadfe3;
+    --shadow: 0 18px 50px rgba(79,48,63,.08);
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: #e9eef0;
-  color: var(--texto);
-  padding: 32px 16px;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.8;
 }
 
-/* CONTENEDOR PRINCIPAL */
-
-.cv {
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-  align-items: stretch;
-  background: #fff;
-  box-shadow: 0 8px 30px rgba(18,52,59,.18);
-}
-
-/* COLUMNA LATERAL */
-
-.lateral {
-  width: 300px;
-  flex-shrink: 0;
-  background: var(--oscuro);
-  color: #fff;
-}
-
-.foto-caja {
-  background: var(--oscuro-2);
-  padding: 40px 0 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.foto-caja img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  border: 5px solid var(--acento);
-}
-
-.lateral-cuerpo {
-  padding: 30px 0 40px;
-}
-
-.lateral h2 {
-  background: var(--acento);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  padding: 9px 26px;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.bloque {
-  margin-bottom: 28px;
-}
-
-.bloque-contenido {
-  padding: 0 26px;
-  font-size: 12px;
-  line-height: 1.7;
-  text-align: left;
-}
-
-.dato {
-  margin-bottom: 13px;
-  overflow-wrap: anywhere;
-}
-
-.dato b {
-  display: block;
-  color: var(--claro);
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.dato a {
-  color: #fff;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-
-.dato a:hover {
-  text-decoration: underline;
-}
-
-/* BARRAS DE NIVEL */
-
-.nivel {
-  margin-bottom: 14px;
-}
-
-.nivel-texto {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  margin-bottom: 6px;
-}
-
-.nivel-texto span:last-child {
-  color: var(--claro);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.barra {
-  height: 6px;
-  background: rgba(255,255,255,.15);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.barra i {
-  display: block;
-  height: 100%;
-  background: var(--acento);
-  border-radius: 3px;
-}
-
-/* INTERESES */
-
-.intereses {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.intereses span {
-  font-size: 10.5px;
-  font-weight: 600;
-  border: 1px solid var(--acento);
-  color: var(--claro);
-  padding: 6px 10px;
-  border-radius: 14px;
-}
-
-/* COLUMNA PRINCIPAL */
-
-.principal {
-  flex: 1;
-  min-width: 0;
-}
-
-.encabezado {
-  padding: 48px 40px 28px;
-  border-bottom: 4px solid var(--acento);
-  text-align: left;
-}
-
-.encabezado h1 {
-  font-size: 34px;
-  line-height: 1.2;
-  font-weight: 800;
-  color: var(--oscuro);
-  letter-spacing: .5px;
-  text-align: left;
-}
-
-.encabezado p {
-  margin-top: 12px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--acento);
-  letter-spacing: 1px;
-  line-height: 1.7;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.contenido {
-  padding: 30px 40px 40px;
-}
-
-/* SECCIONES */
-
-.seccion {
-  margin-bottom: 30px;
-}
-
-.seccion h2 {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--oscuro);
-  border-left: 5px solid var(--acento);
-  padding-left: 12px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.seccion p {
-  font-size: 12px;
-  line-height: 1.8;
-  text-align: justify;
-  text-justify: inter-word;
-  overflow-wrap: break-word;
-}
-
-/* LINEA DE TIEMPO */
-
-.linea {
-  position: relative;
-  padding-left: 26px;
-}
-
-.linea::before {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 6px;
-  bottom: 6px;
-  width: 2px;
-  background: #cfe3e5;
-}
-
-.item {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.item:last-child {
-  margin-bottom: 0;
-}
-
-.item::before {
-  content: "";
-  position: absolute;
-  left: -26px;
-  top: 4px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--acento);
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 2px var(--acento);
-}
-
-.item .fecha {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--acento);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-
-.item h3 {
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--oscuro);
-  line-height: 1.6;
-  margin-top: 2px;
-  text-align: left;
-}
-
-.item .lugar {
-  font-size: 11.5px;
-  font-weight: 600;
-  color: var(--texto);
-  margin-top: 4px;
-  line-height: 1.6;
-  text-align: left;
-}
-
-.item p {
-  margin-top: 6px;
-}
-
-/* LISTAS */
-
-.lista-puntos {
-  list-style: none;
-  margin-top: 8px;
-}
-
-.lista-puntos li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 1.7;
-  text-align: justify;
-}
-
-.lista-puntos li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--acento);
-}
-
-.lista-puntos b {
-  color: var(--oscuro);
-}
-
-/* TARJETAS */
-
-.rejilla {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.tarjeta {
-  border: 1px solid #d6e6e8;
-  border-left: 4px solid var(--acento);
-  border-radius: 4px;
-  padding: 12px;
-  background: #f7fbfb;
-  text-align: left;
-}
-
-.tarjeta b {
-  display: block;
-  font-size: 12px;
-  color: var(--oscuro);
-  line-height: 1.5;
-  margin-bottom: 4px;
-}
-
-.tarjeta span {
-  font-size: 11px;
-  color: var(--texto);
-  line-height: 1.5;
-}
-
-/* BOTON PDF */
-
-.acciones {
-  max-width: 900px;
-  margin: 0 auto 16px;
-  text-align: right;
-}
-
-.acciones button {
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  color: #fff;
-  background: var(--acento);
-  border: 0;
-  border-radius: 6px;
-  padding: 11px 20px;
-  cursor: pointer;
-}
-
-.acciones button:hover {
-  background: #148a8a;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 720px) {
-
-  body {
-    padding: 0;
-  }
-
-  .acciones {
-    padding: 12px;
-    margin-bottom: 0;
-  }
-
-  .cv {
-    flex-direction: column;
-    box-shadow: none;
-  }
-
-  .lateral {
-    width: 100%;
-  }
-
-  .foto-caja {
-    padding: 30px 0;
-  }
-
-  .encabezado {
-    padding: 32px 22px 22px;
-  }
-
-  .encabezado h1 {
-    font-size: 27px;
-  }
-
-  .contenido {
-    padding: 25px 22px 32px;
-  }
-
-  .rejilla {
-    grid-template-columns: 1fr;
-  }
-
-  .seccion p,
-  .lista-puntos li {
+p {
     text-align: justify;
-  }
 }
 
-/* IMPRESION A4 */
-
-@page {
-  size: A4;
-  margin: 0;
+.container {
+    max-width: 1150px;
+    width: 88%;
+    margin: auto;
 }
 
-@media print {
+.section {
+    position: relative;
+    padding: 100px 0;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+}
 
-  body {
-    background: #fff;
-    padding: 0;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
+.section-heading {
+    margin-bottom: 45px;
+}
 
-  .acciones {
-    display: none;
-  }
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
 
-  .cv {
-    max-width: none;
+.section-title {
+    color: var(--wine);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px,5vw,49px);
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.section-description {
+    color: var(--muted);
+    max-width: 650px;
+    margin-top: 12px;
+}
+
+/* MARIPOSAS */
+
+.butterfly {
+    position: absolute;
+    z-index: 8;
+    pointer-events: none;
+    user-select: none;
+    font-size: 25px;
+    filter: drop-shadow(0 4px 5px rgba(133,86,107,.18));
+    animation: butterflyFlight 8s ease-in-out infinite;
+}
+
+.b1 {
+    top: 10%;
+    left: 5%;
+    animation-duration: 9s;
+}
+
+.b2 {
+    top: 24%;
+    right: 8%;
+    font-size: 32px;
+    animation-duration: 11s;
+    animation-delay: 1s;
+}
+
+.b3 {
+    bottom: 14%;
+    left: 45%;
+    font-size: 21px;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.b4 {
+    top: 65%;
+    right: 4%;
+    font-size: 19px;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+
+.b5 {
+    top: 15%;
+    right: 25%;
+    font-size: 17px;
+    animation-duration: 13s;
+    animation-delay: 1.5s;
+}
+
+@keyframes butterflyFlight {
+    0% {
+        transform: translate(0,0) rotate(-12deg);
+    }
+    25% {
+        transform: translate(24px,-22px) rotate(12deg);
+    }
+    50% {
+        transform: translate(-12px,-42px) rotate(-8deg);
+    }
+    75% {
+        transform: translate(-25px,-14px) rotate(15deg);
+    }
+    100% {
+        transform: translate(0,0) rotate(-12deg);
+    }
+}
+
+/* PRESENTACIÓN PRINCIPAL */
+
+.hero {
+    min-height: 690px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 55px;
+    padding-top: 65px;
+    padding-bottom: 75px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    animation: slideIn .9s ease both;
+}
+
+.hero-kicker {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    color: var(--wine);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(47px,6vw,75px);
+    line-height: 1.08;
+    margin: 23px 0;
+    font-weight: 600;
+}
+
+.hero h1 span {
+    color: var(--rose);
+    font-style: italic;
+}
+
+.hero-text {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 540px;
+    line-height: 2;
+}
+
+.hero-photo-area {
+    min-height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    animation: slideIn 1s ease both;
+}
+
+.photo-frame {
+    position: relative;
+    width: min(340px,85%);
+    height: 420px;
+    padding: 12px;
+    background: white;
+    box-shadow: var(--shadow);
+    transform: rotate(2deg);
+    animation: floatPhoto 5s ease-in-out infinite;
+    z-index: 2;
+}
+
+.photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: -14px 14px 14px -14px;
+    border: 1px solid var(--rose);
+    z-index: -1;
+}
+
+.photo-frame img {
     width: 100%;
-    box-shadow: none;
-  }
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
 
-  .seccion,
-  .item,
-  .tarjeta {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
+.photo-caption {
+    position: absolute;
+    bottom: 35px;
+    left: -28px;
+    z-index: 3;
+    padding: 15px 23px;
+    background: white;
+    color: var(--wine);
+    box-shadow: var(--shadow);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.photo-decoration {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border: 1px solid #e5cbd6;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+@keyframes floatPhoto {
+    0%,100% { transform: translateY(0) rotate(2deg); }
+    50% { transform: translateY(-12px) rotate(-1deg); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ESPECIALIDAD */
+
+.specialty {
+    background: var(--wine);
+    color: white;
+    padding: 27px 0;
+}
+
+.specialty-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.specialty span {
+    color: #ead5de;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.specialty strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* SOBRE MÍ */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 65px;
+    align-items: start;
+}
+
+.about-label {
+    padding: 30px;
+    background: #f1e4e9;
+    border-left: 3px solid var(--rose);
+}
+
+.about-label h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    color: var(--wine);
+    line-height: 1.4;
+}
+
+.about-label p {
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    color: #62565c;
+    line-height: 2;
+}
+
+.signature {
+    color: var(--rose);
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+/* DATOS */
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.data-item {
+    padding: 23px;
+    background: white;
+    border: 1px solid var(--line);
+    transition: .3s;
+}
+
+.data-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--rose);
+    box-shadow: var(--shadow);
+}
+
+.data-item span {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.data-item strong,
+.data-item a {
+    font-size: 14px;
+    color: var(--wine);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+/* FORMACIÓN */
+
+.timeline {
+    border-left: 1px solid var(--rose);
+    margin-left: 12px;
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    background: white;
+    padding: 27px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(79,48,63,.045);
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--rose);
+    border: 4px solid var(--cream);
+    left: -43px;
+    top: 32px;
+}
+
+.timeline-item h3 {
+    color: var(--wine);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+.timeline-date {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+/* HABILIDADES */
+
+.skills-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.skill-panel {
+    background: white;
+    padding: 32px;
+    border: 1px solid var(--line);
+}
+
+.skill-panel h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--wine);
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.skill { margin-bottom: 21px; }
+
+.skill-name {
+    color: #594b52;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.skill-bar {
+    height: 6px;
+    background: #f0e5e9;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: var(--level);
+    background: linear-gradient(90deg,var(--rose),var(--wine));
+    border-radius: 10px;
+    transform-origin: left;
+    animation: fillBar 1.5s ease both;
+}
+
+@keyframes fillBar {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.soft-skills span {
+    background: #f4e9ed;
+    color: var(--wine);
+    padding: 9px 14px;
+    font-size: 12px;
+}
+
+/* CURSOS */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.course {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding: 23px;
+    background: white;
+    border: 1px solid var(--line);
+    transition: .3s;
+}
+
+.course:hover {
+    border-color: var(--rose);
+    transform: translateX(5px);
+}
+
+.course-icon {
+    min-width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: #f2e6eb;
+    color: var(--wine);
+    font-size: 20px;
+}
+
+.course h3 {
+    color: var(--wine);
+    font-family: 'Playfair Display',serif;
+    font-size: 19px;
+}
+
+.course p {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: left;
+}
+
+/* PROYECTOS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+}
+
+.project {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.project:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+    border-color: var(--rose);
+}
+
+.project-number {
+    color: #e6d3db;
+    font-family: 'Playfair Display',serif;
+    font-size: 45px;
+    line-height: 1;
+}
+
+.project-icon {
+    font-size: 28px;
+    margin: 18px 0 8px;
+}
+
+.project h3 {
+    color: var(--wine);
+    font-family: 'Playfair Display',serif;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.project p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.project-category {
+    display: inline-block;
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+/* REFERENCIAS */
+
+.reference-box {
+    background: #f1e4e9;
+    text-align: center;
+    padding: 55px 30px;
+}
+
+.reference-box h3 {
+    color: var(--wine);
+    font-size: 27px;
+    font-family: 'Playfair Display',serif;
+}
+
+.reference-box p {
+    max-width: 550px;
+    margin: 12px auto 0;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* CONTACTO */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 30px;
+}
+
+.contact-intro {
+    background: var(--wine);
+    color: white;
+    padding: 38px;
+}
+
+.contact-intro h3 {
+    font-size: 30px;
+    font-family: 'Playfair Display',serif;
+    margin-bottom: 15px;
+}
+
+.contact-intro p {
+    color: #ead5de;
+}
+
+.contact-list {
+    background: white;
+    padding: 30px;
+    border: 1px solid var(--line);
+}
+
+.contact-row {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.contact-row:last-child {
+    border-bottom: none;
+}
+
+.contact-row span {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.contact-row a {
+    color: var(--wine);
+    font-size: 14px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-row a:hover {
+    text-decoration: underline;
+}
+
+/* PIE DE PÁGINA */
+
+.footer {
+    background: #382a33;
+    color: white;
+    padding: 38px 20px;
+    text-align: center;
+}
+
+.footer strong {
+    font-family: 'Playfair Display',serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.footer p {
+    color: #d9c5ce;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* ANIMACIONES DE APARICIÓN */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* DISEÑO PARA CELULARES Y TABLETS */
+
+@media(max-width:850px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 55px;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .hero-photo-area {
+        min-height: 430px;
+    }
+
+    .about-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .data-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .photo-frame {
+        height: 350px;
+        width: 260px;
+    }
+
+    .photo-decoration {
+        width: 260px;
+        height: 260px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .data-grid,
+    .skills-layout,
+    .course-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specialty-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *,*::before,*::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="acciones">
-  <button onclick="window.print()">Descargar en PDF</button>
+<main>
+
+<!-- PRESENTACIÓN PRINCIPAL -->
+
+<section class="container hero" id="inicio">
+
+    <div class="butterfly b1">🦋</div>
+    <div class="butterfly b2">🦋</div>
+    <div class="butterfly b3">🦋</div>
+    <div class="butterfly b4">🦋</div>
+    <div class="butterfly b5">🦋</div>
+
+    <div class="hero-content">
+        <span class="hero-kicker">PORTAFOLIO PERSONAL · 2026</span>
+
+        <h1>
+            Lizbeth Elena<br>
+            <span>Josec Ruelas</span>
+        </h1>
+
+        <p class="hero-text">
+            Estudiante de Arquitectura de Plataformas y Servicios
+            de Tecnologías de la Información. Apasionada por el
+            desarrollo web, la programación y la innovación tecnológica.
+        </p>
+    </div>
+
+    <div class="hero-photo-area">
+        <div class="photo-decoration"></div>
+
+        <div class="photo-frame">
+            <img src="foto.jpg" alt="Fotografía de Lizbeth Elena Josec Ruelas">
+        </div>
+
+        <div class="photo-caption">Creatividad & tecnología</div>
+    </div>
+
+</section>
+
+<div class="specialty">
+    <div class="container specialty-inner">
+        <span>MI ESPECIALIDAD</span>
+        <strong>Arquitectura de Plataformas y Servicios de TI</strong>
+        <span>IESTP SANTA LUCÍA · SEMESTRE VI</span>
+    </div>
 </div>
 
-<main class="cv">
+<!-- SOBRE MÍ -->
 
-<!-- COLUMNA LATERAL -->
+<section class="section" id="sobre">
+    <div class="butterfly b1">🦋</div>
 
-<aside class="lateral">
-
-  <div class="foto-caja">
-    <img src="foto.jpg" alt="Foto de Lizbeth Elena Josec Ruelas">
-  </div>
-
-  <div class="lateral-cuerpo">
-
-    <section class="bloque">
-      <h2>CONTACTO</h2>
-      <div class="bloque-contenido">
-
-        <div class="dato">
-          <b>Celular</b>
-          <a href="tel:+51991639790">991 639 790</a>
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="eyebrow">01 · CONÓCEME</span>
+            <h2 class="section-title">Sobre mí</h2>
+            <p class="section-description">
+                Una presentación de mi formación, intereses y objetivos.
+            </p>
         </div>
 
-        <div class="dato">
-          <b>Correo</b>
-          <a href="mailto:lizbethjosec367@gmail.com">lizbethjosec367@gmail.com</a>
+        <div class="about-layout reveal">
+            <div class="about-label">
+                <span class="eyebrow">MI PERFIL</span>
+                <h3>Aprender, crear e innovar a través de la tecnología.</h3>
+                <p>
+                    Comprometida con el aprendizaje y el desarrollo
+                    de nuevas habilidades.
+                </p>
+            </div>
+
+            <div class="about-text">
+                <p>
+                    Soy estudiante de Arquitectura de Plataformas y
+                    Servicios de Tecnologías de la Información en el
+                    IESTP Santa Lucía. Me interesa el desarrollo de
+                    páginas web, la programación, las bases de datos
+                    y las soluciones tecnológicas.
+                </p>
+
+                <p>
+                    Durante mi formación académica he desarrollado
+                    proyectos relacionados con el diseño web, la
+                    gestión de información, la electrónica y la
+                    automatización.
+                </p>
+
+                <p>
+                    Me considero una persona responsable, creativa,
+                    organizada y comprometida con mis objetivos.
+                    Busco continuar aprendiendo y aplicar mis
+                    conocimientos en proyectos que aporten soluciones.
+                </p>
+
+                <div class="signature">Lizbeth Elena Josec</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DATOS PERSONALES -->
+
+<section class="section" id="datos">
+    <div class="butterfly b2">🦋</div>
+
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="eyebrow">02 · INFORMACIÓN</span>
+            <h2 class="section-title">Datos personales</h2>
+            <p class="section-description">
+                Información general y medios de contacto.
+            </p>
         </div>
 
-        <div class="dato">
-          <b>Ubicación</b>
-          Santa Lucía, Lampa, Puno — Perú
+        <div class="data-grid reveal">
+            <div class="data-item">
+                <span>Nombre completo</span>
+                <strong>Lizbeth Elena Josec Ruelas</strong>
+            </div>
+
+            <div class="data-item">
+                <span>Teléfono</span>
+                <strong>991 639 790</strong>
+            </div>
+
+            <div class="data-item">
+                <span>Correo electrónico</span>
+                <strong>lizbethjosec367@gmail.com</strong>
+            </div>
+
+            <div class="data-item">
+                <span>Localidad</span>
+                <strong>Santa Lucía, Lampa, Puno - Perú</strong>
+            </div>
+
+            <div class="data-item">
+                <span>Institución</span>
+                <strong>IESTP Santa Lucía</strong>
+            </div>
+
+            <div class="data-item">
+                <span>GitHub</span>
+                <a href="https://github.com/Lizbethjosec367-UX" target="_blank" rel="noopener">
+                    Ver perfil profesional ↗
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FORMACIÓN ACADÉMICA -->
+
+<section class="section" id="formacion">
+    <div class="butterfly b3">🦋</div>
+
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="eyebrow">03 · EDUCACIÓN</span>
+            <h2 class="section-title">Formación académica</h2>
+            <p class="section-description">
+                Mi trayectoria educativa y preparación profesional.
+            </p>
         </div>
 
-        <div class="dato">
-          <b>GitHub</b>
-          <a href="https://github.com/Lizbethjosec367-UX">github.com/Lizbethjosec367-UX</a>
+        <div class="timeline reveal">
+            <article class="timeline-item">
+                <div class="timeline-date">2026 · EN CURSO</div>
+                <h3>Educación superior tecnológica</h3>
+                <p><strong>IESTP Santa Lucía</strong></p>
+                <p>
+                    Arquitectura de Plataformas y Servicios de
+                    Tecnologías de la Información.
+                </p>
+                <span class="tag">SEMESTRE VI</span>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-date">FORMACIÓN ESCOLAR</div>
+                <h3>Educación secundaria</h3>
+                <p><strong>Colegio José Carlos Mariátegui</strong></p>
+                <p>Santa Lucía, Lampa, Puno.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- HABILIDADES -->
+
+<section class="section" id="habilidades">
+    <div class="butterfly b4">🦋</div>
+
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="eyebrow">04 · CONOCIMIENTOS</span>
+            <h2 class="section-title">Mis habilidades</h2>
+            <p class="section-description">
+                Herramientas y competencias desarrolladas durante mi formación.
+            </p>
         </div>
 
-      </div>
-    </section>
+        <div class="skills-layout reveal">
+            <div class="skill-panel">
+                <h3>Conocimientos tecnológicos</h3>
 
-    <section class="bloque">
-      <h2>DATOS PERSONALES</h2>
-      <div class="bloque-contenido">
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--level:75%"></div>
+                    </div>
+                </div>
 
-        <div class="dato">
-          <b>Nombres y apellidos</b>
-          Lizbeth Elena Josec Ruelas
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--level:70%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Microsoft Word</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--level:85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Microsoft Excel</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--level:70%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Git y GitHub</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--level:65%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-panel">
+                <h3>Competencias personales</h3>
+
+                <div class="soft-skills">
+                    <span>Responsabilidad</span>
+                    <span>Creatividad</span>
+                    <span>Trabajo en equipo</span>
+                    <span>Comunicación</span>
+                    <span>Organización</span>
+                    <span>Adaptabilidad</span>
+                    <span>Aprendizaje continuo</span>
+                    <span>Resolución de problemas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CURSOS -->
+
+<section class="section" id="cursos">
+    <div class="butterfly b1">🦋</div>
+
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="eyebrow">05 · ACTUALIZACIÓN</span>
+            <h2 class="section-title">Cursos y conocimientos</h2>
+            <p class="section-description">
+                Temas tecnológicos complementarios a mi formación.
+            </p>
         </div>
 
-        <div class="dato">
-          <b>Edad</b>
-          20 años
+        <div class="course-grid reveal">
+            <div class="course">
+                <div class="course-icon">⌁</div>
+                <div>
+                    <h3>Fibra óptica</h3>
+                    <p>Medios de transmisión y comunicaciones.</p>
+                </div>
+            </div>
+
+            <div class="course">
+                <div class="course-icon">◇</div>
+                <div>
+                    <h3>Seguridad en la web</h3>
+                    <p>Protección y seguridad en entornos digitales.</p>
+                </div>
+            </div>
+
+            <div class="course">
+                <div class="course-icon">✧</div>
+                <div>
+                    <h3>Industria 4.0</h3>
+                    <p>Transformación digital y tecnologías emergentes.</p>
+                </div>
+            </div>
+
+            <div class="course">
+                <div class="course-icon">◎</div>
+                <div>
+                    <h3>Tendencias en comunicaciones</h3>
+                    <p>Innovaciones en las comunicaciones en el Perú.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROYECTOS -->
+
+<section class="section" id="proyectos">
+    <div class="butterfly b2">🦋</div>
+
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="eyebrow">06 · EXPERIENCIA PRÁCTICA</span>
+            <h2 class="section-title">Proyectos destacados</h2>
+            <p class="section-description">
+                Una selección de trabajos y proyectos desarrollados
+                durante mi aprendizaje tecnológico.
+            </p>
         </div>
 
-      </div>
-    </section>
+        <div class="project-grid reveal">
 
-    <section class="bloque">
-      <h2>APTITUDES</h2>
-      <div class="bloque-contenido">
+            <article class="project">
+                <div class="project-number">01</div>
+                <div class="project-icon">▤</div>
+                <h3>Sistema de biblioteca</h3>
+                <p>
+                    Desarrollo de un sistema para registrar libros,
+                    organizarlos por categorías, gestionar préstamos,
+                    devoluciones y consultas de información.
+                </p>
+                <span class="project-category">PROGRAMACIÓN · BASES DE DATOS</span>
+            </article>
 
-        <div class="nivel">
-          <div class="nivel-texto"><span>Trabajo en equipo</span><span>90%</span></div>
-          <div class="barra"><i style="width:90%"></i></div>
-        </div>
+            <article class="project">
+                <div class="project-number">02</div>
+                <div class="project-icon">☕</div>
+                <h3>Cafetería ALIZ</h3>
+                <p>
+                    Diseño de una plataforma web para un kiosco,
+                    donde los clientes pueden consultar productos,
+                    reservar pedidos y recogerlos en el horario elegido.
+                </p>
+                <span class="project-category">WORDPRESS · DISEÑO WEB</span>
+            </article>
 
-        <div class="nivel">
-          <div class="nivel-texto"><span>Responsabilidad</span><span>95%</span></div>
-          <div class="barra"><i style="width:95%"></i></div>
-        </div>
+            <article class="project">
+                <div class="project-number">03</div>
+                <div class="project-icon">ϟ</div>
+                <h3>Instalación de energía eléctrica</h3>
+                <p>
+                    Proyecto académico enfocado en el reconocimiento
+                    de componentes eléctricos, instalaciones y
+                    distribución básica de energía.
+                </p>
+                <span class="project-category">ELECTRICIDAD · INSTALACIONES</span>
+            </article>
 
-        <div class="nivel">
-          <div class="nivel-texto"><span>Comunicación</span><span>85%</span></div>
-          <div class="barra"><i style="width:85%"></i></div>
-        </div>
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>Resolución de problemas</span><span>80%</span></div>
-          <div class="barra"><i style="width:80%"></i></div>
-        </div>
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>Adaptabilidad</span><span>85%</span></div>
-          <div class="barra"><i style="width:85%"></i></div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="bloque">
-      <h2>HERRAMIENTAS</h2>
-      <div class="bloque-contenido">
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>Word</span><span>85%</span></div>
-          <div class="barra"><i style="width:85%"></i></div>
-        </div>
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>Excel</span><span>80%</span></div>
-          <div class="barra"><i style="width:80%"></i></div>
-        </div>
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>PowerPoint</span><span>80%</span></div>
-          <div class="barra"><i style="width:80%"></i></div>
-        </div>
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>HTML y CSS</span><span>75%</span></div>
-          <div class="barra"><i style="width:75%"></i></div>
-        </div>
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>Git y GitHub</span><span>70%</span></div>
-          <div class="barra"><i style="width:70%"></i></div>
-        </div>
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>Bases de datos</span><span>70%</span></div>
-          <div class="barra"><i style="width:70%"></i></div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="bloque">
-      <h2>IDIOMAS</h2>
-      <div class="bloque-contenido">
-
-        <div class="nivel">
-          <div class="nivel-texto"><span>Español</span><span>Nativo</span></div>
-          <div class="barra"><i style="width:100%"></i></div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="bloque">
-      <h2>INTERESES</h2>
-      <div class="bloque-contenido">
-        <div class="intereses">
-          <span>Tecnología</span>
-          <span>Redes</span>
-          <span>Programación</span>
-          <span>Ciberseguridad</span>
-          <span>Aprender cosas nuevas</span>
-        </div>
-      </div>
-    </section>
-
-  </div>
-</aside>
-
-<!-- COLUMNA PRINCIPAL -->
-
-<div class="principal">
-
-  <header class="encabezado">
-    <h1>Lizbeth Elena<br>Josec Ruelas</h1>
-    <p>Técnica en Arquitectura de Plataformas y Servicios de Tecnologías de la Información</p>
-  </header>
-
-  <div class="contenido">
-
-    <section class="seccion">
-      <h2>Perfil profesional</h2>
-      <p>
-        Estudiante de Arquitectura de Plataformas y Servicios de Tecnologías de la Información, con interés en el desarrollo de sistemas, la gestión de plataformas y el soporte tecnológico. Me caracterizo por ser responsable, organizada y tener capacidad de aprendizaje. Busco oportunidades para aplicar mis conocimientos y continuar desarrollándome profesionalmente.
-      </p>
-    </section>
-
-    <section class="seccion">
-      <h2>Objetivo profesional</h2>
-      <p>
-        Contribuir con mis conocimientos en tecnologías de la información al logro de los objetivos de una organización, aplicando buenas prácticas en el desarrollo de sistemas, las redes y el soporte técnico, fortaleciendo mis competencias de forma continua.
-      </p>
-    </section>
-
-    <section class="seccion">
-      <h2>Formación académica</h2>
-
-      <div class="linea">
-
-        <div class="item">
-          <div class="fecha">Actualidad</div>
-          <h3>Carrera técnica en Arquitectura de Plataformas y Servicios de Tecnologías de la Información (APSTI)</h3>
-          <div class="lugar">IESTP Santa Lucía — Instituto de Educación Superior Tecnológico Público</div>
-        </div>
-
-        <div class="item">
-          <div class="fecha">Educación secundaria</div>
-          <h3>Educación básica regular</h3>
-          <div class="lugar">Colegio José Carlos Mariátegui — Santa Lucía, Lampa, Puno</div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="seccion">
-      <h2>Competencias técnicas</h2>
-
-      <ul class="lista-puntos">
-        <li><b>Desarrollo de sistemas:</b> creación de aplicaciones y páginas web utilizando HTML y CSS.</li>
-        <li><b>Bases de datos:</b> organización y gestión de información de un sistema.</li>
-        <li><b>Redes y fibra óptica:</b> conocimientos básicos de redes y telecomunicaciones.</li>
-        <li><b>Seguridad en la web:</b> aplicación de buenas prácticas para proteger la información.</li>
-        <li><b>Transformación digital:</b> conocimientos sobre Industria 4.0 y uso de tecnología en las organizaciones.</li>
-        <li><b>Soporte técnico:</b> instalación y configuración de software y equipos informáticos.</li>
-      </ul>
-    </section>
-
-    <section class="seccion">
-      <h2>Proyectos</h2>
-
-      <div class="linea">
-        <div class="item">
-          <div class="fecha">IESTP Santa Lucía</div>
-          <h3>Sistema de biblioteca</h3>
-
-          <p>
-            Desarrollo de un sistema orientado a la gestión y administración de una biblioteca institucional, incluyendo:
-          </p>
-
-          <ul class="lista-puntos">
-            <li>Registro y organización de libros por categorías.</li>
-            <li>Control de préstamos y devoluciones.</li>
-            <li>Registro y administración de estudiantes.</li>
-          </ul>
+            <article class="project">
+                <div class="project-number">04</div>
+                <div class="project-icon">⌘</div>
+                <h3>Proyecto Arduino</h3>
+                <p>
+                    Prácticas de electrónica y programación mediante
+                    placas Arduino, sensores y componentes para
+                    desarrollar propuestas de automatización.
+                </p>
+                <span class="project-category">ARDUINO · ELECTRÓNICA · AUTOMATIZACIÓN</span>
+            </article>
 
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="seccion">
-      <h2>Cursos y capacitaciones</h2>
+<!-- REFERENCIAS -->
 
-      <div class="rejilla">
+<section class="section" id="referencias">
+    <div class="butterfly b3">🦋</div>
 
-        <div class="tarjeta">
-          <b>Fibra óptica</b>
-          <span>Redes y telecomunicaciones</span>
+    <div class="container reveal">
+        <div class="section-heading">
+            <span class="eyebrow">07 · REFERENCIAS</span>
+            <h2 class="section-title">Referencias</h2>
         </div>
 
-        <div class="tarjeta">
-          <b>Seguridad en la web</b>
-          <span>Ciberseguridad</span>
+        <div class="reference-box">
+            <h3>Disponibles a solicitud</h3>
+            <p>
+                Las referencias académicas y personales podrán
+                proporcionarse cuando sean requeridas.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+
+<section class="section" id="contacto">
+    <div class="butterfly b4">🦋</div>
+
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="eyebrow">08 · CONECTEMOS</span>
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-description">
+                Puedes comunicarte conmigo a través de los siguientes medios.
+            </p>
         </div>
 
-        <div class="tarjeta">
-          <b>Industria 4.0 y transformación digital</b>
-          <span>Innovación tecnológica</span>
+        <div class="contact-layout reveal">
+
+            <div class="contact-intro">
+                <span class="eyebrow">ESTOY DISPUESTA A APRENDER</span>
+                <h3>Construyamos nuevas oportunidades.</h3>
+                <p>
+                    Me interesa seguir desarrollando mis conocimientos,
+                    participar en proyectos tecnológicos y adquirir
+                    nuevas experiencias.
+                </p>
+            </div>
+
+            <div class="contact-list">
+                <div class="contact-row">
+                    <span>CORREO ELECTRÓNICO</span>
+                    <a href="mailto:lizbethjosec367@gmail.com">
+                        lizbethjosec367@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-row">
+                    <span>TELÉFONO</span>
+                    <a href="tel:+51991639790">+51 991 639 790</a>
+                </div>
+
+                <div class="contact-row">
+                    <span>GITHUB</span>
+                    <a href="https://github.com/Lizbethjosec367-UX"
+                       target="_blank" rel="noopener">
+                        github.com/Lizbethjosec367-UX ↗
+                    </a>
+                </div>
+
+                <div class="contact-row">
+                    <span>UBICACIÓN</span>
+                    <a href="#datos">Santa Lucía, Lampa, Puno - Perú</a>
+                </div>
+            </div>
+
         </div>
-
-        <div class="tarjeta">
-          <b>Tendencias en las comunicaciones en el Perú</b>
-          <span>Telecomunicaciones</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="seccion">
-      <h2>Referencias</h2>
-      <p>Disponibles a solicitud.</p>
-    </section>
-
-  </div>
-</div>
+    </div>
+</section>
 
 </main>
+
+<footer class="footer">
+    <strong>Lizbeth Elena Josec Ruelas</strong>
+    <p>Portafolio profesional · 2026</p>
+    <p>Diseño, tecnología e innovación.</p>
+    <p>✦ Hecho con dedicación ✦</p>
+</footer>
+
+<script>
+// ANIMACIONES AL DESPLAZARSE
+
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+revealElements.forEach(element => {
+    revealObserver.observe(element);
+});
+
+</script>
 
 </body>
 </html>
